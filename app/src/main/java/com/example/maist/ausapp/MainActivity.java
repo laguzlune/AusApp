@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new CommuMain(), "Commu");
-        adapter.addFragment(new QuizList(), "Exam");
+        adapter.addFragment(new CommuMain(), "การสื่อสาร");
+        adapter.addFragment(new QuizList(), "แบบฝึกหัด");
         viewPager.setAdapter(adapter);
     }
 

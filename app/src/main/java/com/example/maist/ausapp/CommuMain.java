@@ -97,7 +97,7 @@ public class CommuMain extends Fragment implements AddItemDialog.AddDialogListen
         showPickRecyclerView.setAdapter(pickedListAdapter);
 
         ArrayAdapter<String> catAdapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, mCategories);
+                R.layout.categoty_item, mCategories);
 
         mListView.setAdapter(catAdapter);
 
