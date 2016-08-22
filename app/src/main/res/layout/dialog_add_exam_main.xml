@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
-    
+
     <ImageView
-        android:id="@+id/image_box"
+        android:id="@+id/exam_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
@@ -16,7 +16,7 @@
     </ImageView>
 
     <Button
-        android:id="@+id/add_img_btn"
+        android:id="@+id/add_exam_img_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -32,15 +32,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pic_name"
+            android:text="@string/exam_name"
             android:textSize="@dimen/normal_txt_size" />
 
         <EditText
-            android:id="@+id/pic_name"
+            android:id="@+id/exam_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="ชื่อภาพ(ภาษาไทย)" />
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textSize="@dimen/normal_txt_size"/>
+
+        <EditText
+            android:id="@+id/exam_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text">
+
+        </EditText>
 
     </LinearLayout>
 
@@ -52,14 +71,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/category"
+            android:text="@string/q_type"
             android:textSize="@dimen/normal_txt_size"/>
 
         <Spinner
-            android:id="@+id/select_category"
+            android:id="@+id/select_q_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+        </Spinner>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/o_type"
+            android:textSize="@dimen/normal_txt_size"
+            android:layout_marginLeft="8dp"/>
+
+        <Spinner
+            android:id="@+id/select_o_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         </Spinner>
 
     </LinearLayout>

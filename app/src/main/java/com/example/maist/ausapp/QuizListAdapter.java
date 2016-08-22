@@ -24,7 +24,7 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.MyView
     private onQuizItemClicked quizListener;
 
     public interface onQuizItemClicked {
-        void replaceFragment();
+        void replaceFragment(Fragment fragment);
     }
 
     public void setListener(onQuizItemClicked listener) {
@@ -76,7 +76,8 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.MyView
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                quizListener.replaceFragment();
+                Fragment fm = new QnA();
+                quizListener.replaceFragment(fm);
                 //quizListener.getSelectedQuiz(quizList);
             }
         });

@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-public class QuizList extends Fragment implements QuizListAdapter.onQuizItemClicked{
+public class QuizList extends Fragment {
 
     private RecyclerView quizRecycler;
     private QuizListAdapter adapter;
@@ -39,7 +39,7 @@ public class QuizList extends Fragment implements QuizListAdapter.onQuizItemClic
 
         itemLists = mHelper.getQuizList();
         adapter = new QuizListAdapter(getActivity(), itemLists);
-        adapter.setListener(this);
+        //adapter.setListener(this);
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 5);
         quizRecycler.setLayoutManager(mLayoutManager);
@@ -49,14 +49,14 @@ public class QuizList extends Fragment implements QuizListAdapter.onQuizItemClic
 
         return examView;
     }
-
+    /*
     @Override
     public void replaceFragment() {
 
         final FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.quiz_root_layout, new QnA(), "QnA");
         ft.commit();
-    }
+    } */
 
     public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
 

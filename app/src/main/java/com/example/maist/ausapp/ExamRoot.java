@@ -10,7 +10,10 @@ import android.view.ViewGroup;
 /**
  * Created by MaIst on 2/8/2559.
  */
-public class ExamRoot extends Fragment{
+public class ExamRoot extends Fragment implements QuizListAdapter.onQuizItemClicked{
+
+    //private QuizListAdapter adapter;
+    //DBHelper mhelper;
 
     public ExamRoot() {
 
@@ -23,19 +26,19 @@ public class ExamRoot extends Fragment{
         if (savedInstanceState == null) {
 
             final FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.replace(R.id.quiz_root_layout, new QuizList(), "QnA");
+            ft.replace(R.id.quiz_root_layout, new QuizList(), "QuizList");
             ft.commit();
         }
         return rootView;
     }
-/*
+
     @Override
-    public void replaceFragment() {
+    public void replaceFragment(Fragment target_frag) {
 
         final FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.quiz_root_layout, new QnA(), "QnA");
+        ft.replace(R.id.quiz_root_layout, target_frag, "target_frag");
         ft.commit();
-    }*/
+    }
 
 
 
